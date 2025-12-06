@@ -236,10 +236,11 @@ Audit Queries
 
 
 ### ER Diagram
-![ER Diagram](./screenshots/er_diagram.png)
+![ER Diagram](./screenshots/er1_diagram.png) ![ER Diagram](./screenshots/er2_diagram.png)
 
 
-### Database Structure in SQL Developer
+
+### Business Process Model
 
 ![Database Structure Lucidchart](./screenshots/Lucidchart.png)
 
