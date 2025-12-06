@@ -85,15 +85,15 @@ smart-fertilizer-system/
 │   └── documentation/
 │       ├── data_dictionary.md
 │       ├── architecture.md
-│       └── design_decisions.md
+│      
 ├── queries/
 │   ├── data_retrieval.sql
 │   ├── analytics_queries.sql
 │   └── audit_queries.sql
 ├── business_intelligence/
 │   ├── bi_requirements.md
-│   ├── dashboards.md
-│   └── kpi_definitions.md
+│   |── dashboards.md
+│ 
 ├── screenshots/
 │   ├── oem_monitoring/
 │   ├── database_objects/
@@ -101,7 +101,7 @@ smart-fertilizer-system/
 └── documentation/
     ├── user_guide.md
     └── technical_specifications.md
-```
+
 
 ---
 
@@ -116,7 +116,7 @@ smart-fertilizer-system/
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/irisisimbi/smart-fertilizer-system.git
+   git clone https://github.com/irisisimbi/mon_27121_iris_smartfertilizersystem_db.git
    cd smart-fertilizer-system
    ```
 
@@ -169,70 +169,116 @@ smart-fertilizer-system/
 ## Documentation
 
 ### Database Documentation
-- **[Data Dictionary](./database/documentation/data_dictionary.md)** - Complete table and column definitions
-- **[Architecture](./database/documentation/architecture.md)** - System design and data flow
-- **[Design Decisions](./database/documentation/design_decisions.md)** - Technical choices and rationale
+- **[Data Dictionary](documentation/data_dictionary.md)** - Complete table and column definitions
+- **[Architecture](documentation/architecture.md)** - System design and data flow
 
 ### User Documentation
-- **[User Guide](./documentation/user_guide.md)** - How to use the system
-- **[Technical Specifications](./documentation/technical_specifications.md)** - Detailed technical documentation
+- **[User Guide](documentation/user_guide.md)** - How to use the system
+- **[Technical Specifications](documentation/technical_specifications.md)** - Detailed technical documentation
 
-### SQL Scripts
-- **[Database Scripts](./database/scripts/)** - All DDL and DML scripts
-- **[Data Retrieval Queries](./queries/data_retrieval.sql)** - Sample SELECT statements
-- **[Analytics Queries](./queries/analytics_queries.sql)** - Advanced analytical queries
-- **[Audit Queries](./queries/audit_queries.sql)** - Audit log retrieval
+### Query Scripts
+
+**Data retrival**
+**[Data retrival](/queries/data_retrieval.sql)**
+
+**Analytics Queries**
+**[Analytics queries](/queries/analytics_queries.sql)**
+
+Audit Queries
+**[Audit queries](/queries/audit_queries.sql)**
+
 
 ---
 
 ## Screenshots
 
+### Database Creation
+![Database Creation](./screenshots/photo2.png)
+
+### Tablespace Configuration
+![Tablespace Configuration](./screenshots/photo3.png)
+
+### Alter Table
+![Alter Table](./screenshots/photo4.png)
+
+
 ### ER Diagram
 ![ER Diagram](./screenshots/er_diagram.png)
 
-View all database object screenshots: **[Database Objects Gallery](./screenshots/screenshots/)**
 
 ### Database Structure in SQL Developer
-![Database Structure](./screenshots/database_objects/database_structure.png)
+![Database Structure Lucidchart](./screenshots/lucidchart.png)
 
-### Sample Data
-![Sample Data](./screenshots/database_objects/sample_data.png)
-
-View sample data screenshots: **[Sample Data](./screenshots/database_objects/)**
 
 ### Procedures and Triggers
 ![Procedures in Editor](./screenshots/procedure_soil_test.png)
+
+![Procedures in Editor](./screenshots/update_stock.png)
+
 ![Triggers in Editor](./screenshots/trigger_emp_restrict.png)
+
 ![Triggers in Editor](./screenshots/trigger_emp_comp.png)
 
-
-View all code screenshots: **[Code Editor Views](./screenshots/database_objects/)**
 
 ### Test Results
 
 ![Test Execution](./screenshots/test_allowed.png)
+
+![Test Execution](./screenshots/count_test_by_farmer_procedure.png)
+
 ![Test Execution](./screenshots/test_soil.png)
+
+
+### Recommendations
+
 ![Recommendation Output](./screenshots/recommendation_procedure.png)
+
 ![Recommendation Output](./screenshots/recommendation_log.png)
-![Recommendation Output](./screenshots/recommandation.png)
+
 
 
 View all test results: **[Test Results Gallery]**
+
 ![Test Execution](./screenshots/test1.png)
+
 ![Test Execution](./screenshots/test2.png)
+
 ![Test Execution](./screenshots/test3.png)
+
 ![Test Execution](./screenshots/test4.png)
+
 ![Test Execution](./screenshots/test5.png)
+
 ![Test Execution](./screenshots/test6.png)
+
 ![Test Execution](./screenshots/test7.png)
+
 ![Test Execution](./screenshots/test8.png)
+
 ![Test Execution](./screenshots/test9.png)
+
 ![Test Execution](./screenshots/test10.png)
+
+### Selections
+
+![Selection](./screenshots/selection.png)
+
+![Selection](./screenshots/selection1.png)
+
 ### Audit Logs
+
 ![Audit Log Entries](./screenshots/audit_attemps.png)
+
 ![Audit Log Entries](./screenshots/log_audit.png)
+
 ### OEM Monitoring
+
 ![OEM Dashboard](./screenshots/dashboard.png)
+
+![Dashboard](./screenshots/dashboard2_1.png)
+![Dashboard](./screenshots/dashboard2_2.png)
+
+
 
 ---
 
@@ -245,7 +291,18 @@ View all test results: **[Test Results Gallery]**
 - **FARMERS** - Farmer information and contact details
 - **CROPS** - Crop types and nutrient requirements
 
-Full table definitions: **[Create Tables][def]**
+Full table definitions: **[Create Tables](sql/create_tables.sql)**
+
+![Farmer Table](./screenshots/farmer.png)
+
+![Lab User Table](./screenshots/lab_user.png)
+
+![Soil Test Table](./screenshots/soil_test.png)
+
+![Fertilizer Table](./screenshots/fertilizer.png)
+
+![Recommendation Table](./screenshots/recommandation.png)
+
 
 ### Procedures
 - `RECOMMEND_FERTILIZER` - Main recommendation engine
@@ -261,18 +318,38 @@ Full procedure documentation:**[Procedures](sql/procedures.sql)**
 
 Full function documentation: **[Functions](sql/functions.sql)**
 
+![Function](./screenshots/function1.png)
+
+![Function](./screenshots/function2.png)
+
+![Function](./screenshots/check_restrictions.png)
+
 ### Triggers
 - `TRG_AUDIT_SOIL_INSERT` - Logs soil sample insertions
 - `TRG_AUDIT_RECOMMENDATION` - Logs recommendations
 - `TRG_UPDATE_TIMESTAMP` - Maintains last modified timestamps
 
 Full trigger documentation: **[Triggers](sql/triggers.sql)**
+ 
+ ### Attempts
+ ![Public attempt allowed](./screenshots/public_test.png)
+
+ ![Public attempt denied](./screenshots/publicholiday_denied.png)
+
+![ Test Denied](./screenshots/denied_test.png)
+
+![ Test Allowed](./screenshots/test_allowed.png)
+
 
 ### Packages
 - `PKG_FERTILIZER_ANALYTICS` - Advanced analytics package
 - `PKG_SOIL_MANAGEMENT` - Soil data management utilities
 
 Full package documentation: **[Packages](sql/packages.sql)**
+
+![Packages](./screenshots/package1.png)
+
+![Packages](./screenshots/package2.png)
 
 ---
 
@@ -281,12 +358,12 @@ Full package documentation: **[Packages](sql/packages.sql)**
 ### BI Requirements
 Comprehensive business intelligence requirements and analysis needs.
 
-**[View BI Requirements](./business_intelligence/bi_requirements.md)**
+**[View BI Requirements](documentation/bi_requirements.md)**
 
 ### Dashboards
 Dashboard specifications for agricultural insights and monitoring.
 
-**[View Dashboard Specifications](./business_intelligence/dashboards.md)**
+**[View Dashboard Specifications](documentation/dashboards.md)**
 
 ### Key Performance Indicators (KPIs)
 - Average nutrient deficiency rates
