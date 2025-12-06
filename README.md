@@ -72,36 +72,69 @@ Unlike traditional methods relying on farmer experience or manual calculations, 
 ## Repository Structure
 
 ```
-smart-fertilizer-system/
+mon_27121_iris_smartfertilizersystem_db/
+│
 ├── README.md
+│
 ├── database/
 │   ├── scripts/
 │   │   ├── create_tables.sql
-│   │   ├── insert_data.sql
-│   │   ├── procedures.sql
-│   │   ├── functions.sql
+│   │   ├── insert_sample_data.sql
+│   │   ├── soil_test_procedures.sql
+│   │   ├── fertilizer_recommendation_logic.sql
 │   │   ├── triggers.sql
-│   │   └── packages.sql
-│   └── documentation/
-│       ├── data_dictionary.md
-│       ├── architecture.md
-│      
+│   │   ├── packages.sql
+│   │   └── views.sql
+│   │
+│   ├── documentation/
+│   │   ├── data_dictionary.md
+│   │   ├── schema_design.md
+│   │   ├── architecture_overview.md
+│   │   └── design_decisions.md
+│   │
+│   └── readme_database.md
+│
 ├── queries/
 │   ├── data_retrieval.sql
 │   ├── analytics_queries.sql
 │   └── audit_queries.sql
-├── business_intelligence/
+│
+├── reports/
+│   ├── test_results/
+│   │   ├── procedure_test_log.md
+│   │   ├── trigger_test_log.md
+│   │   └── data_validation_log.md
+│   │
+│   ├── error_logs/
+│   │   └── debug_notes.md
+│   │
+│   └── performance_notes.md
+│
+├── bi/
 │   ├── bi_requirements.md
-│   |── dashboards.md
-│ 
+│   ├── kpi_definitions.md
+│   ├── powerbi_model_description.md
+│   ├── dashboards.md
+│   └── relationships_diagram.png
+│
 ├── screenshots/
-│   ├── oem_monitoring/
-│   ├── database_objects/
-│   └── test_results/
-└── documentation/
-    ├── user_guide.md
-    └── technical_specifications.md
-
+│   ├── diagrams/
+│   │   ├── erd.png
+│   │   ├── schema_diagram.png
+│   │   └── flowchart.png
+│   │
+│   ├── sql_developer/
+│   │   ├── table_view.png
+│   │   ├── constraints_view.png
+│   │   ├── sql_tab.png
+│   │   └── procedure_output.png
+│   │
+│   └── test_outputs/
+│       ├── insert_results.png
+│       ├── procedure_run.png
+│       └── trigger_results.png
+│
+└── .gitignore
 
 ---
 
