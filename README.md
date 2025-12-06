@@ -235,8 +235,8 @@ Audit Queries
 ![Alter Table](./screenshots/photo4.png)
 
 
-### ER Diagram
-![ER Diagram](./screenshots/er1_diagram.png) ![ER Diagram](./screenshots/er2_diagram.png)
+### Logical Model Design
+![ER Diagram](./screenshots/er1_diagram.png)![ER Diagram](./screenshots/er2_diagram.png)
 
 
 
