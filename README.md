@@ -207,10 +207,12 @@ Audit Queries
 
 
 ### Database Structure in SQL Developer
-![Database Structure Lucidchart](./screenshots/lucidchart.png)
+
+![Database Structure Lucidchart](./screenshots/Lucidchart.png)
 
 
 ### Procedures and Triggers
+
 ![Procedures in Editor](./screenshots/procedure_soil_test.png)
 
 ![Procedures in Editor](./screenshots/update_stock.png)
