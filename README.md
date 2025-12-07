@@ -368,12 +368,16 @@ Full function documentation: **[Functions](sql/functions.sql)**
 Full trigger documentation: **[Triggers](sql/triggers.sql)**
  
  ### Attempts
+ **Public Attempt allowed**
  ![Public attempt allowed](./screenshots/public_test.png)
 
+**Public Attempt Denied**
  ![Public attempt denied](./screenshots/publicholiday_denied.png)
 
+**Weekday Denied**
 ![ Test Denied](./screenshots/denied_test.png)
 
+**Weekend Allowed**
 ![ Test Allowed](./screenshots/test_allowed.png)
 
 
